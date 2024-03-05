@@ -1,0 +1,759 @@
+{
+  "html": [
+    {
+      "question": "what is the full meaning  of HTML",
+      "correctAnswer": 0,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "Hyper Text Markup Language"
+        },
+        {
+          "letter": "b",
+          "option": "Hyper Text Mark Language"
+        },
+        {
+          "letter": "c",
+          "option": "High Transfer Markup Language"
+        },
+        {
+          "letter": "d",
+          "option": "High Test Markup Line"
+        }
+      ]
+    },
+    {
+      "question": "what is the Language of the web?",
+      "correctAnswer": 1,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "CSS"
+        },
+        {
+          "letter": "b",
+          "option": "HTML"
+        },
+        {
+          "letter": "c",
+          "option": "JAVASCRIPT"
+        },
+        {
+          "letter": "d",
+          "option": "JAVA"
+        }
+      ]
+    },
+    {
+      "question": "We write HTML in ?",
+      "correctAnswer": 2,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "HTML objects"
+        },
+        {
+          "letter": "b",
+          "option": "span objects"
+        },
+        {
+          "letter": "c",
+          "option": "HTML tags"
+        },
+        {
+          "letter": "d",
+          "option": "HTML strings"
+        }
+      ]
+    },
+    {
+      "question": "Which tag is used to break paragraphs or headings into a new line?",
+      "correctAnswer": 0,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "<br/>"
+        },
+        {
+          "letter": "b",
+          "option": "<span>"
+        },
+        {
+          "letter": "c",
+          "option": "<p>"
+        },
+        {
+          "letter": "d",
+          "option": "<em>"
+        }
+      ]
+    },
+    {
+      "question": "span elements by default are?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "block elements"
+        },
+        {
+          "letter": "b",
+          "option": "inline-block elements"
+        },
+        {
+          "letter": "c",
+          "option": "styled elements"
+        },
+        {
+          "letter": "d",
+          "option": "inline-elements"
+        }
+      ]
+    },
+    {
+      "question": "We represent images in HTML using?",
+      "correctAnswer": 0,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "<img/>"
+        },
+        {
+          "letter": "b",
+          "option": "<h1>"
+        },
+        {
+          "letter": "c",
+          "option": "<strong>"
+        },
+        {
+          "letter": "d",
+          "option": "<h4>"
+        }
+      ]
+    },
+    {
+      "question": "which is the correct syntax to represent an image in HTML?",
+      "correctAnswer": 2,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "<img source='image-path' alt='name'/> "
+        },
+        {
+          "letter": "b",
+          "option": "<img src='image-path' />"
+        },
+        {
+          "letter": "c",
+          "option": "<img src='image-path' alt='name'/>"
+        },
+        {
+          "letter": "d",
+          "option": "<img src='image-name' alt='name'/>"
+        }
+      ]
+    },
+    {
+      "question": "Which attribute do we use in order to set the language of our html document?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "src attribute"
+        },
+        {
+          "letter": "b",
+          "option": "line attribute"
+        },
+        {
+          "letter": "c",
+          "option": "title attribute"
+        },
+        {
+          "letter": "d",
+          "option": "lang attribute"
+        }
+      ]
+    }
+  ],
+  "css": [
+    {
+      "question": "what is the full meaning  of CSS",
+      "correctAnswer": 1,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "Cascading Storage State"
+        },
+        {
+          "letter": "b",
+          "option": "Cascading Style Sheet"
+        },
+        {
+          "letter": "c",
+          "option": "Context Storage Sheet"
+        },
+        {
+          "letter": "d",
+          "option": "None of the above"
+        }
+      ]
+    },
+    {
+      "question": "What happens when the position property of an element is set to absolute?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "Element is given some additional padding"
+        },
+        {
+          "letter": "b",
+          "option": "Element remains unchanged"
+        },
+        {
+          "letter": "c",
+          "option": "element becomes invisible to the browser"
+        },
+        {
+          "letter": "d",
+          "option": "Element is taken out of its parent container"
+        }
+      ]
+    },
+    {
+      "question": "Wc property can we use to hide an element?",
+      "correctAnswer": 2,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "position"
+        },
+        {
+          "letter": "b",
+          "option": "Transition"
+        },
+        {
+          "letter": "c",
+          "option": "Display"
+        },
+        {
+          "letter": "d",
+          "option": "Transform"
+        }
+      ]
+    },
+    {
+      "question": "What is the default size of text in the browser?",
+      "correctAnswer": 0,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "16px"
+        },
+        {
+          "letter": "b",
+          "option": "12px"
+        },
+        {
+          "letter": "c",
+          "option": "20px"
+        },
+        {
+          "letter": "d",
+          "option": "10px"
+        }
+      ]
+    },
+    {
+      "question": "Why can height not be given to an inline element by default?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "Because they do not need height"
+        },
+        {
+          "letter": "b",
+          "option": "Because they are invisible to the browser"
+        },
+        {
+          "letter": "c",
+          "option": "the do not hav a height property"
+        },
+        {
+          "letter": "d",
+          "option": "They occupy only the space they need"
+        }
+      ]
+    },
+    {
+      "question": "When using flex-box, which property is used to give row margins to elements?",
+      "correctAnswer": 0,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "gap"
+        },
+        {
+          "letter": "b",
+          "option": "margin"
+        },
+        {
+          "letter": "c",
+          "option": "padding"
+        },
+        {
+          "letter": "d",
+          "option": "display"
+        }
+      ]
+    },
+    {
+      "question": "Where do we declare global variables in css?",
+      "correctAnswer": 2,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "head "
+        },
+        {
+          "letter": "b",
+          "option": "body"
+        },
+        {
+          "letter": "c",
+          "option": "root"
+        },
+        {
+          "letter": "d",
+          "option": "footer"
+        }
+      ]
+    },
+    {
+      "question": "how do we style links in css?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "using normal classes"
+        },
+        {
+          "letter": "b",
+          "option": "using hover class"
+        },
+        {
+          "letter": "c",
+          "option": "using a tag"
+        },
+        {
+          "letter": "d",
+          "option": "using a:link selector"
+        }
+      ]
+    }
+  ],
+  "javascript": [
+    {
+      "question": "Where does javascript code run?",
+      "correctAnswer": 1,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "browser url"
+        },
+        {
+          "letter": "b",
+          "option": "v8 engine of browser"
+        },
+        {
+          "letter": "c",
+          "option": "cpu"
+        },
+        {
+          "letter": "d",
+          "option": "None of the above"
+        }
+      ]
+    },
+    {
+      "question": "Which part of the js engine is responsible for performing large operations such as operations on objects?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "call stack"
+        },
+        {
+          "letter": "b",
+          "option": "callBack queue"
+        },
+        {
+          "letter": "c",
+          "option": "microtask queue"
+        },
+        {
+          "letter": "d",
+          "option": "memory heap"
+        }
+      ]
+    },
+    {
+      "question": "Which queue is responsible for executing callback functions in promises?",
+      "correctAnswer": 2,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "call stack"
+        },
+        {
+          "letter": "b",
+          "option": "callBack queue"
+        },
+        {
+          "letter": "c",
+          "option": "Microtask queue"
+        },
+        {
+          "letter": "d",
+          "option": "function queue"
+        }
+      ]
+    },
+    {
+      "question": "How do we reference elements in an array?",
+      "correctAnswer": 0,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "using bracket notation"
+        },
+        {
+          "letter": "b",
+          "option": "using typeof operator"
+        },
+        {
+          "letter": "c",
+          "option": "using dot notation"
+        },
+        {
+          "letter": "d",
+          "option": "None of the above"
+        }
+      ]
+    },
+    {
+      "question": "When we need key value pairs in javascript, which of the data structures below is suitable?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "arrays"
+        },
+        {
+          "letter": "b",
+          "option": "strings"
+        },
+        {
+          "letter": "c",
+          "option": "numbers"
+        },
+        {
+          "letter": "d",
+          "option": "Objects"
+        }
+      ]
+    },
+    {
+      "question": "When the value of a variable need to change over time, we declare that variable using?",
+      "correctAnswer": 0,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "let"
+        },
+        {
+          "letter": "b",
+          "option": "const"
+        },
+        {
+          "letter": "c",
+          "option": "char"
+        },
+        {
+          "letter": "d",
+          "option": "func"
+        }
+      ]
+    },
+    {
+      "question": "What is the this keyword in function expressions and function declarations?",
+      "correctAnswer": 2,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "null "
+        },
+        {
+          "letter": "b",
+          "option": "window"
+        },
+        {
+          "letter": "c",
+          "option": "undefined"
+        },
+        {
+          "letter": "d",
+          "option": "function name"
+        }
+      ]
+    },
+    {
+      "question": "What is the 'this' keyword in an arrow function?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "null"
+        },
+        {
+          "letter": "b",
+          "option": "undefined"
+        },
+        {
+          "letter": "c",
+          "option": "document"
+        },
+        {
+          "letter": "d",
+          "option": "they do not have their own this keyword"
+        }
+      ]
+    },
+    {
+      "question": "What values represent booleans in javascript?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "null"
+        },
+        {
+          "letter": "b",
+          "option": "undefined"
+        },
+        {
+          "letter": "c",
+          "option": "symbol"
+        },
+        {
+          "letter": "d",
+          "option": "true or false"
+        }
+      ]
+    }
+  ],
+
+  "react": [
+    {
+      "question": "What is React?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "A browser method"
+        },
+        {
+          "letter": "b",
+          "option": "A javascript framework"
+        },
+        {
+          "letter": "c",
+          "option": "A javascript engine"
+        },
+        {
+          "letter": "d",
+          "option": "A javascript library"
+        }
+      ]
+    },
+    {
+      "question": "When we need to keep interactions on in react in sync with the UI, we use special react functions called?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "variables"
+        },
+        {
+          "letter": "b",
+          "option": "methods"
+        },
+        {
+          "letter": "c",
+          "option": "callbacks"
+        },
+        {
+          "letter": "d",
+          "option": "Hooks"
+        }
+      ]
+    },
+    {
+      "question": "Which action triggers a rerender in react?",
+      "correctAnswer": 2,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "mutating a let variable"
+        },
+        {
+          "letter": "b",
+          "option": "declaring functions"
+        },
+        {
+          "letter": "c",
+          "option": "Updating state"
+        },
+        {
+          "letter": "d",
+          "option": "closing our application"
+        }
+      ]
+    },
+    {
+      "question": "When a piece of data in our UI changes over time, which type of hook do we use?",
+      "correctAnswer": 0,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "useState hook"
+        },
+        {
+          "letter": "b",
+          "option": "useRef hook"
+        },
+        {
+          "letter": "c",
+          "option": "let hook"
+        },
+        {
+          "letter": "d",
+          "option": "None of the above"
+        }
+      ]
+    },
+    {
+      "question": "Which hook do we use to implement side effects in the top level?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "useState hook"
+        },
+        {
+          "letter": "b",
+          "option": "useReducer hook"
+        },
+        {
+          "letter": "c",
+          "option": "useRef hook"
+        },
+        {
+          "letter": "d",
+          "option": "useEffect hook"
+        }
+      ]
+    },
+    {
+      "question": "What happens when we pass in an empty array in the useEffect hook?",
+      "correctAnswer": 0,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "the effect runs only on initial render"
+        },
+        {
+          "letter": "b",
+          "option": "effect runs after every render"
+        },
+        {
+          "letter": "c",
+          "option": "effect runs on unmount"
+        },
+        {
+          "letter": "d",
+          "option": "None of the above"
+        }
+      ]
+    },
+    {
+      "question": "When we need a piece of code to run when a component unmounts in an effect, what do we do in the effect?",
+      "correctAnswer": 2,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "return an object "
+        },
+        {
+          "letter": "b",
+          "option": "return a variable"
+        },
+        {
+          "letter": "c",
+          "option": "return a cleanup function"
+        },
+        {
+          "letter": "d",
+          "option": "return an empty array"
+        }
+      ]
+    },
+    {
+      "question": "After the reconciliation process, a new tree is created called?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "React element tree"
+        },
+        {
+          "letter": "b",
+          "option": "reconciler tree"
+        },
+        {
+          "letter": "c",
+          "option": "DOM "
+        },
+        {
+          "letter": "d",
+          "option": "the fibre tree"
+        }
+      ]
+    },
+    {
+      "question": "The process of comparing elements step by step on the fibre tree is called?",
+      "correctAnswer": 3,
+      "answers": [
+        {
+          "letter": "A",
+          "option": "reconciling"
+        },
+        {
+          "letter": "b",
+          "option": "rendering"
+        },
+        {
+          "letter": "c",
+          "option": "committing"
+        },
+        {
+          "letter": "d",
+          "option": "diffing"
+        }
+      ]
+    }
+  ]
+}

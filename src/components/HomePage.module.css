@@ -1,0 +1,31 @@
+.list li {
+  list-style: none;
+}
+.list {
+  margin-top: 50px;
+}
+
+.list a:link,
+.list a:visited {
+  padding: 25px;
+  background-color: #344154af;
+  margin-bottom: 20px;
+  width: 400px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: all 0.3s;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+}
+.list a:hover,
+.list a:active {
+  transform: translate(10px, -5px);
+  background-color: #0b192daf;
+}
+.iconBox {
+  display: flex;
+  align-items: center;
+}
