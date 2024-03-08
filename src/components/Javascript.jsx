@@ -2,41 +2,11 @@ import { useEffect, useReducer } from "react";
 import { IoLogoJavascript } from "react-icons/io5";
 import Loader from "./Loader";
 
-const initialData = {
-  questionData: [],
-  loading: true,
-  questionNumber: 0,
-  selectedOption: null,
-  points: 0,
-  reStart: false,
-};
+import QuestionSection from "./QuestionSection";
+import PointsScored from "./PointsScored";
+import MainComponent from "./MainComponent";
 
-function reducer(state, action) {
-  switch (action.type) {
-    case "start":
-      return { ...state, questionData: action.payload, loading: false };
-
-    case "selected":
-      return {
-        ...state,
-        selectedOption: action.payload.elIndex,
-        points: state.points + action.payload.curPoint,
-      };
-
-    case "nextQuestion":
-      return {
-        ...state,
-        questionNumber: action.payload + state.questionNumber,
-        selectedOption: null,
-      };
-
-    case "completed":
-      return { ...initialData, reStart: true };
-
-    default:
-      return state;
-  }
-}
+import { initialData, reducer } from "./reducerData";
 
 function Javascript() {
   const [
@@ -82,7 +52,7 @@ function Questions({
   dispatch,
   points,
 }) {
-  const { question, answers, correctAnswer } = questionData.at(questionNumber);
+  const { question } = questionData.at(questionNumber);
 
   const totalQuestions = questionData.length;
   const completed = questionNumber + 1 === totalQuestions;
@@ -90,89 +60,28 @@ function Questions({
   return (
     <>
       {completed && selectedOption !== null ? (
-        <h1 className="score">
-          {`${
-            points === totalQuestions
-              ? "Excellent! You had all correct 🍕"
-              : `You scored ${points}/${totalQuestions}`
-          }`}
-        </h1>
+        <PointsScored points={points} totalQuestions={totalQuestions} />
       ) : (
-        <div>
+        <QuestionSection
+          question={question}
+          points={points}
+          totalQuestions={totalQuestions}
+          questionNumber={questionNumber}
+        >
           <p className="logo">
-            <IoLogoJavascript className="icon-3" />
-            Html
+            <IoLogoJavascript className="icon-4" />
+            Javascript
           </p>
-
-          <em className="question-num">
-            question {`${questionNumber + 1}/${totalQuestions}`}
-          </em>
-          <p className="question">{question} </p>
-
-          <input readOnly type="range" value={points} max={totalQuestions} />
-        </div>
+        </QuestionSection>
       )}
 
-      <ul>
-        {answers.map((answer, i) => (
-          <Options
-            answer={answer}
-            index={i}
-            key={i}
-            dispatch={dispatch}
-            selectedOption={selectedOption}
-            correctAnswer={correctAnswer}
-          />
-        ))}
-
-        {questionNumber + 1 < totalQuestions && (
-          <button
-            className={`btn ${selectedOption === null && "disable"}`}
-            disabled={selectedOption === null}
-            onClick={() => dispatch({ type: "nextQuestion", payload: 1 })}
-          >
-            submit answer
-          </button>
-        )}
-        {completed && (
-          <button
-            className={`btn ${selectedOption === null && "disable"}`}
-            disabled={selectedOption === null}
-            onClick={() => dispatch({ type: "completed" })}
-          >
-            restart quiz
-          </button>
-        )}
-      </ul>
+      <MainComponent
+        questionData={questionData}
+        questionNumber={questionNumber}
+        selectedOption={selectedOption}
+        dispatch={dispatch}
+        points={points}
+      />
     </>
-  );
-}
-
-function Options({ answer, index, selectedOption, dispatch, correctAnswer }) {
-  const disable = selectedOption !== null;
-
-  const activeEl = selectedOption === index;
-
-  return (
-    <button
-      disabled={disable}
-      className={`answers ${disable && "disable"}
-      ${disable && index === correctAnswer && "selected"}
-
-       ${activeEl && "selected "} 
-       ${activeEl && selectedOption !== correctAnswer && "wrong"} `}
-      onClick={() =>
-        dispatch({
-          type: "selected",
-          payload: {
-            elIndex: index,
-            curPoint: index === correctAnswer ? 1 : 0,
-          },
-        })
-      }
-    >
-      <span className="letter">{answer.letter.toUpperCase()}</span>
-      {answer.option}
-    </button>
   );
 }
