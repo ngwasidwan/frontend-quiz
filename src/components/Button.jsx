@@ -1,10 +1,10 @@
-function SubmitButton({
-  children,
-  selectedOption,
-  dispatch,
-  type,
-  value = null,
-}) {
+import { useContext } from "react";
+// import { HtmlContext } from "./Html";
+import { MyContext } from "./MyContext";
+
+function Button({ children, type, value = null }) {
+  const { dispatch, selectedOption } = useContext(MyContext);
+
   const noSelection = selectedOption === null;
   return (
     <button
@@ -19,4 +19,4 @@ function SubmitButton({
   );
 }
 
-export default SubmitButton;
+export default Button;

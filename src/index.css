@@ -68,10 +68,11 @@ body {
   display: flex;
   font-size: 18px;
   align-items: center;
+  transition: all 0.3s;
 }
 
 .answers:hover {
-  box-shadow: 1px 1px 1px 1px #ffffff;
+  box-shadow: 1px 1px 1px 1px #52f6a985;
 }
 
 .btn,
@@ -168,10 +169,9 @@ input {
 
 .disable {
   cursor: not-allowed;
-  opacity: 0.6;
 }
 .correct {
-  background-color: rgba(34, 111, 187, 0.772);
+  background-color: rgba(4, 35, 66, 0.772);
 }
 .wrong {
   background-color: rgba(194, 84, 84, 0.792);

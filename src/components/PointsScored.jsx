@@ -1,4 +1,9 @@
-function PointsScored({ points, totalQuestions }) {
+import { useContext } from "react";
+import { MyContext } from "./MyContext";
+
+// { points, totalQuestions }
+function PointsScored() {
+  const { points, totalQuestions } = useContext(MyContext);
   return (
     <h1 className="score">
       {`${

@@ -1,4 +1,5 @@
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, useContext } from "react";
+
 import { IoLogoJavascript } from "react-icons/io5";
 import Loader from "./Loader";
 
@@ -7,6 +8,7 @@ import PointsScored from "./PointsScored";
 import MainComponent from "./MainComponent";
 
 import { initialData, reducer } from "./reducerData";
+import { MyContext } from "./MyContext";
 
 function Javascript() {
   const [
@@ -31,13 +33,20 @@ function Javascript() {
     <div className="questions-container">
       {loading && <Loader />}
       {!loading && (
-        <Questions
-          questionData={questionData}
-          questionNumber={questionNumber}
-          selectedOption={selectedOption}
-          dispatch={dispatch}
-          points={points}
-        />
+        <MyContext.Provider
+          value={{
+            questionData,
+            questionNumber,
+            selectedOption,
+            points,
+            dispatch,
+            totalQuestions: questionData.length,
+            curQuestion: questionData.at(questionNumber),
+            curAnswers: questionData.at(questionNumber),
+          }}
+        >
+          <Questions />
+        </MyContext.Provider>
       )}
     </div>
   );
@@ -45,43 +54,26 @@ function Javascript() {
 
 export default Javascript;
 
-function Questions({
-  questionData,
-  questionNumber,
-  selectedOption,
-  dispatch,
-  points,
-}) {
-  const { question } = questionData.at(questionNumber);
+function Questions() {
+  const { totalQuestions, questionNumber, selectedOption } =
+    useContext(MyContext);
 
-  const totalQuestions = questionData.length;
   const completed = questionNumber + 1 === totalQuestions;
 
   return (
     <>
       {completed && selectedOption !== null ? (
-        <PointsScored points={points} totalQuestions={totalQuestions} />
+        <PointsScored />
       ) : (
-        <QuestionSection
-          question={question}
-          points={points}
-          totalQuestions={totalQuestions}
-          questionNumber={questionNumber}
-        >
+        <QuestionSection>
           <p className="logo">
-            <IoLogoJavascript className="icon-4" />
+            <IoLogoJavascript className="icon-3" />
             Javascript
           </p>
         </QuestionSection>
       )}
 
-      <MainComponent
-        questionData={questionData}
-        questionNumber={questionNumber}
-        selectedOption={selectedOption}
-        dispatch={dispatch}
-        points={points}
-      />
+      <MainComponent />
     </>
   );
 }

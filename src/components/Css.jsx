@@ -1,5 +1,6 @@
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, useContext } from "react";
 import { IoLogoCss3 } from "react-icons/io5";
+
 import Loader from "./Loader";
 
 import QuestionSection from "./QuestionSection";
@@ -7,6 +8,7 @@ import PointsScored from "./PointsScored";
 import MainComponent from "./MainComponent";
 
 import { initialData, reducer } from "./reducerData";
+import { MyContext } from "./MyContext";
 
 function Css() {
   const [
@@ -31,13 +33,20 @@ function Css() {
     <div className="questions-container">
       {loading && <Loader />}
       {!loading && (
-        <Questions
-          questionData={questionData}
-          questionNumber={questionNumber}
-          selectedOption={selectedOption}
-          dispatch={dispatch}
-          points={points}
-        />
+        <MyContext.Provider
+          value={{
+            questionData,
+            questionNumber,
+            selectedOption,
+            points,
+            dispatch,
+            totalQuestions: questionData.length,
+            curQuestion: questionData.at(questionNumber),
+            curAnswers: questionData.at(questionNumber),
+          }}
+        >
+          <Questions />
+        </MyContext.Provider>
       )}
     </div>
   );
@@ -45,43 +54,49 @@ function Css() {
 
 export default Css;
 
-function Questions({
-  questionData,
-  questionNumber,
-  selectedOption,
-  dispatch,
-  points,
-}) {
-  const { question } = questionData.at(questionNumber);
+function Questions() {
+  const { totalQuestions, questionNumber, selectedOption } =
+    useContext(MyContext);
 
-  const totalQuestions = questionData.length;
   const completed = questionNumber + 1 === totalQuestions;
 
   return (
     <>
       {completed && selectedOption !== null ? (
-        <PointsScored points={points} totalQuestions={totalQuestions} />
+        <PointsScored />
       ) : (
-        <QuestionSection
-          question={question}
-          points={points}
-          totalQuestions={totalQuestions}
-          questionNumber={questionNumber}
-        >
+        <QuestionSection>
           <p className="logo">
-            <IoLogoCss3 className="icon-4" />
+            <IoLogoCss3 className="icon-2" />
             Css
           </p>
         </QuestionSection>
       )}
 
-      <MainComponent
-        questionData={questionData}
-        questionNumber={questionNumber}
-        selectedOption={selectedOption}
-        dispatch={dispatch}
-        points={points}
-      />
+      <MainComponent />
     </>
   );
 }
+//types of state
+
+//we can classify state in terms of state accessibility (local or global state) and in terms of state domain (remote state and UI state)
+
+//Remote state is application data that is loaded from an api
+//we get remote state in an asynchronous way
+// data might need refetching + updating
+// remote state in large scale apps needs to be createRoutesFromChildren, revalidated etc
+//we can place our remote state inside 3rd party libraries like redux, react query,etc
+
+// UI state is everything else ie theme, list filters, form data etc
+//UI state is synchronous and stored in the application
+
+// NB: context API is used to manage UI state and not remote state
+
+//We can store state in the url
+
+//We can store state in the users browser ie local storage, session storage etc
+
+// in small apps, to store remote state we use fetch +useEffect + useState/useReducer
+
+// in big apps, we treat all remote state as global remote state. we use context API + useState/useReducer
+// we use external libraries like redux, react query,swr,rtk query etc

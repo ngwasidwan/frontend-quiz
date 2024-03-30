@@ -1,10 +1,11 @@
-export default function Options({
-  answer,
-  index,
-  selectedOption,
-  dispatch,
-  correctAnswer,
-}) {
+import { useContext } from "react";
+import { MyContext } from "./MyContext";
+
+export default function Options({ answer, index }) {
+  const { curAnswers, selectedOption, dispatch } = useContext(MyContext);
+
+  const { correctAnswer } = curAnswers;
+
   const disable = selectedOption !== null;
 
   const activeEl = selectedOption === index;

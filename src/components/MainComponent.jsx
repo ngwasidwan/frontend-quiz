@@ -1,49 +1,29 @@
-import SubmitButton from "./SubmitButton";
+import Button from "./Button";
 import Options from "./Options";
+// import { MyContext } from "./myContext";
+import { MyContext } from "./MyContext";
+import { useContext } from "react";
 
-export default function MainComponent({
-  questionData,
-  questionNumber,
-  selectedOption,
-  dispatch,
-}) {
-  const { answers, correctAnswer } = questionData.at(questionNumber);
+export default function MainComponent() {
+  const { totalQuestions, questionNumber, curAnswers } = useContext(MyContext);
 
-  const totalQuestions = questionData.length;
+  const { answers } = curAnswers;
+
+  // const totalQuestions = questionData.length;
   const completed = questionNumber + 1 === totalQuestions;
 
   return (
     <ul>
       {answers.map((answer, i) => (
-        <Options
-          answer={answer}
-          index={i}
-          key={i}
-          dispatch={dispatch}
-          selectedOption={selectedOption}
-          correctAnswer={correctAnswer}
-        />
+        <Options answer={answer} index={i} key={i} />
       ))}
 
       {questionNumber + 1 < totalQuestions && (
-        <SubmitButton
-          selectedOption={selectedOption}
-          dispatch={dispatch}
-          type="nextQuestion"
-          value={1}
-        >
+        <Button type="nextQuestion" value={1}>
           Submit answer
-        </SubmitButton>
+        </Button>
       )}
-      {completed && (
-        <SubmitButton
-          selectedOption={selectedOption}
-          dispatch={dispatch}
-          type="completed"
-        >
-          Restart Quiz
-        </SubmitButton>
-      )}
+      {completed && <Button type="completed">Restart Quiz</Button>}
     </ul>
   );
 }

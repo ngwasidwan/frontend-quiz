@@ -580,7 +580,7 @@
       ]
     },
     {
-      "question": "When we need to keep interactions on in react in sync with the UI, we use special react functions called?",
+      "question": "When we need to keep interactions in react in sync with the UI, we use special react functions called?",
       "correctAnswer": 3,
       "answers": [
         {

@@ -4,8 +4,8 @@ Project is a frontend quiz app for answering frontend related questions.
 
 ## App setup
 
-run npm run dev to start vite.
-run npm run server to start the json server.
+use npm run dev to start vite.
+use npm run server to start the json server.
 
 ### App Structure
 
